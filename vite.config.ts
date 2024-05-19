@@ -1,7 +1,9 @@
+/// <reference types="vitest" />
 import { defineConfig } from "vite";
 import dts from "vite-plugin-dts";
 import { peerDependencies } from "./package.json";
 import tailwindcss from "tailwindcss";
+import { resolve } from "path";
 
 export default defineConfig({
   build: {
@@ -28,6 +30,17 @@ export default defineConfig({
   css: {
     postcss: {
       plugins: [tailwindcss],
+    },
+  },
+  test: {
+    globals: true,
+    environment: "jsdom",
+    setupFiles: "./setupTests.ts",
+    // include: ["**/__test__/**/*.test.ts?(x)"],
+  },
+  resolve: {
+    alias: {
+      "@": resolve(__dirname, "src"),
     },
   },
 });
