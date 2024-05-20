@@ -13,6 +13,7 @@ This is a library of reusable UI components built with React, TypeScript, and Ta
 - [Storybook](#storybook)
 - [Creating a New Component](#creating-a-new-component)
 - [Modifying the Component Template](#modifying-the-component-template)
+- [Using the library in another project](#using-the-library-in-another-project)
 - [Pre-commit Hook](#pre-commit-hook)
 - [Contributing](#contributing)
 - [License](#license)
