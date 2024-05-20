@@ -20,7 +20,8 @@
     "prepare": "husky install",
     "test": "vitest run",
     "test-watch": "vitest",
-    "test:ui": "vitest --ui"
+    "test:ui": "vitest --ui",
+    "create-component": "node scripts/createComponent.js"
   },
   "dependencies": {
     "react": "^18.2.0",
