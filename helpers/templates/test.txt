@@ -1,0 +1,12 @@
+import React from "react";
+import { describe, expect, it } from "vitest";
+import { render, screen } from "@testing-library/react";
+import {componentNameCapitalized} from "../{componentNameCapitalized}";
+
+describe("{componentNameCapitalized} component", () => {
+    it("{componentNameCapitalized} should render correctly", () => {
+        render(<{componentNameCapitalized} />);
+        const {componentName} = screen.getByRole("{componentName}");
+        expect({componentName}).toBeInTheDocument();
+    });
+});

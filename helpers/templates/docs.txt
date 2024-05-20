@@ -1,0 +1,19 @@
+import { Meta, Primary, Controls, Story, Title, Subtitle, Description, Stories } from '@storybook/blocks';
+
+import * as {componentNameCapitalized}Stories from './{componentNameCapitalized}.stories';
+
+<Meta of={{componentNameCapitalized}Stories} />
+
+<Title />
+<Subtitle />
+<Description />
+A {componentNameCapitalized} is ...
+
+<Primary />
+
+## Props
+
+<Controls />
+
+<Stories />
+{/* ... */}

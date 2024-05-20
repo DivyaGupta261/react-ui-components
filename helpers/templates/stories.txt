@@ -1,0 +1,20 @@
+import type { Meta, StoryObj } from "@storybook/react";
+import {componentNameCapitalized} from "../{componentNameCapitalized}";
+
+const meta: Meta<typeof {componentNameCapitalized}> = {
+    title: "{componentNameCapitalized}",
+    component: {componentNameCapitalized},
+};
+
+export default meta;
+type Story = StoryObj<typeof {componentNameCapitalized}>;
+
+export const Primary: Story = {
+    args: {
+        text: "{componentNameCapitalized}",
+        intent: "primary",
+        size: "small",
+    },
+};
+
+/* Add more stories here */

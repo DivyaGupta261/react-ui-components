@@ -1,0 +1,54 @@
+import React from "react";
+import { cva } from "class-variance-authority";
+import { twMerge } from "tailwind-merge";
+
+export type {componentNameCapitalized}Props = {
+    // Add props here
+    text?: string;
+    size?: "small" | "large";
+    intent?: "primary" | "secondary" | "default";
+};
+
+const {componentNameCapitalized}Variants = cva(
+    /* component base style */
+    "text-gray-500",
+    {
+        variants: {
+            /* component intents / colors */
+            intent: {
+                primary: "text-blue-500",
+                secondary: "text-green-500",
+                default: "text-gray-500",
+            },
+            /* component sizes */
+            size: {
+                small: ["text-sm"],
+                large: ["text-lg"],
+            },
+        },
+    
+        // defaults
+        defaultVariants: {
+            intent: "default",
+            size: "small",
+        },
+    },
+);
+
+
+const {componentNameCapitalized} : React.FC<{componentNameCapitalized}Props> = ({
+    text = "{componentNameCapitalized}",
+    size = "small",
+    intent = "primary",
+    ...props
+}) => {
+    const defaultStyle = '';
+    return (
+        /* Add your component JSX here */
+        <div className={twMerge(defaultStyle, {componentNameCapitalized}Variants({ intent, size }))}>
+            {text}
+        </div>
+    );
+};
+
+export default {componentNameCapitalized} ;
