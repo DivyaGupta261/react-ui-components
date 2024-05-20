@@ -42,21 +42,22 @@ npm install
 If you want to start your own component library based on this template:
 
 **1.** Clone the repository as mentioned above.
-**2.** Remove the existing Git origin:
+**2.** Change the package name in `package.json` to your own package name.
+**3.** Remove the existing Git origin:
 
     ```bash
     git remote remove origin
     ```
 
-**3.** Create a new repository as you normally would do, on GitHub or any other Git hosting service.
+**4.** Create a new repository as you normally would do, on GitHub or any other Git hosting service.
 
-**4.** Add the new repository as the origin:
+**5.** Add the new repository as the origin:
 
     ```bash
     git remote add origin <your-repository-url>
     ```
 
-**5.** Push the code to the new repository:
+**6.** Push the code to the new repository:
 
   ```bash
   git push -u origin main
