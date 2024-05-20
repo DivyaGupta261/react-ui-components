@@ -40,22 +40,22 @@ npm install
 
 If you want to start your own component library based on this template:
 
-*1.* Clone the repository as mentioned above.
-*2.* Remove the existing Git origin:
+**1.** Clone the repository as mentioned above.
+**2.** Remove the existing Git origin:
 
     ```bash
     git remote remove origin
     ```
 
-*3.* Create a new repository as you normally would do, on GitHub or any other Git hosting service.
+**3.** Create a new repository as you normally would do, on GitHub or any other Git hosting service.
 
-*4.* Add the new repository as the origin:
+**4.** Add the new repository as the origin:
 
     ```bash
     git remote add origin <your-repository-url>
     ```
 
-*5.* Push the code to the new repository:
+**5.** Push the code to the new repository:
 
   ```bash
   git push -u origin main
@@ -145,6 +145,10 @@ This will create a new component in the `src/components` directory, along with a
 ## Modifying the Component Template
 
 To modify the template files used when creating a new component, navigate to the `scripts/templates` directory and modify the files as needed. These templates are used by the `create-component` script to generate new component files.
+
+## Using the library in another project
+
+To use the library locally in your other React projects, refer to this [blog here](https://medium.com/p/05cd58319801)
 
 ## Pre-commit Hook
 
