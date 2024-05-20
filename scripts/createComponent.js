@@ -11,7 +11,13 @@ if (!componentName) {
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
-const srcDir = path.join(__dirname.split('helpers')[0], 'src');
+const currentFolderName = __dirname.split('/').pop();
+const rootDir = path.join(__dirname.split(currentFolderName)[0]);
+const srcDir = path.join(rootDir, 'src');
+
+const packageJsonContents = fs.readFileSync(path.join(rootDir, 'package.json'), 'utf8');
+const packageJsonData = JSON.parse(packageJsonContents);
+const packageName = packageJsonData.name;
 
 console.log(`Creating component ${componentName}...`,);
 
@@ -39,6 +45,7 @@ const getContents = (fileName) => {
         let contents = data.toString();
         contents = contents.replace(/{componentNameCapitalized}/g, componentNameCapitalized)
         contents = contents.replace(/{componentName}/g, componentName)
+        contents = contents.replace(/{packageName}/g, packageName)
         return contents;
     } catch (err) {
         console.error('Error encountered while trying to read template files', err);

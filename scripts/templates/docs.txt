@@ -7,13 +7,22 @@ import * as {componentNameCapitalized}Stories from './{componentNameCapitalized}
 <Title />
 <Subtitle />
 <Description />
-A {componentNameCapitalized} is ...
+A {componentName} is ...
 
 <Primary />
 
 ## Props
 
 <Controls />
+
+
+Import the component into your project:
+
+```jsx
+import { {componentNameCapitalized} } from "{packageName}";
+import "{packageName}/dist/style.css";
+
+```
 
 <Stories />
 {/* ... */}
