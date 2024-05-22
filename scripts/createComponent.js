@@ -2,12 +2,14 @@ import fs from 'fs';
 import path, { dirname } from 'path';
 import { fileURLToPath } from 'url';
 
-const componentName = process.argv[2];
+let componentName = process.argv[2];
 
 if (!componentName) {
   console.error('Please provide a component name.');
   process.exit(1);
 }
+
+componentName = componentName.charAt(0).toLowerCase() + componentName.slice(1);
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
